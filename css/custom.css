@@ -275,4 +275,8 @@ i.scroll:hover {
 	height: 75%;
   }
 
+  .flag-img {
+    width: 100%;
+  }
+
 }
