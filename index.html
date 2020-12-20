@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="uk-UA">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Прапор України. Щоб висів у кожній хаті!">
+    <meta name="author" content="Oleksandr Devychenko">
+
+    <title>Прапор України</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	
+	<!-- Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-TileImage" content="mstile-144x144.png">
+    
+    <!-- Google Map -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&language=uk&key=AIzaSyAImRx93ijtiiEm0VTA2BybUXNt32Y1f2c"></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAImRx93ijtiiEm0VTA2BybUXNt32Y1f2c&callback=initMap" type="text/javascript"></script>
+    <script>
+    var map;
+    function initialize() {
+        var myLatlng = new google.maps.LatLng(49.991225, 36.233222);
+        var mapOptions = {
+            scrollwheel: false,
+            zoom: 17,
+            disableDefaultUI: true,
+            zoomControl: true,
+            center: myLatlng
+        };
+        map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        var contentString = '<strong>Точка самовивозу в Харкові</strong><br>Тут можна зустрітися і забрати прапор';
+        var infowindow = new google.maps.InfoWindow({ content: contentString });
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Місце самовивозу'
+        });
+        infowindow.open(map,marker);
+        google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map,marker);
+        });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <!-- End Google Map -->
+</head>
+
+<body>
+	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-27729259-8', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+	
+	
+
+    <!-- Side Menu -->
+    <!-- <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand"><a href="http://startbootstrap.com">Start Bootstrap</a>
+            </li>
+            <li><a href="#top">Home</a>
+            </li>
+            <li><a href="#about">About</a>
+            </li>
+            <li><a href="#services">Services</a>
+            </li>
+            <li><a href="#portfolio">Portfolio</a>
+            </li>
+            <li><a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </div> -->
+    <!-- /Side Menu -->
+
+    <!-- Full Page Image Header Area -->
+    <div id="top" class="header">
+		<div class="bg-blur">
+		</div>
+		<img src="img/praporua-caption.png" alt="Щоб висів у кожній хаті Прапор України!" class="praporua-caption">
+        <div class="vert-text">
+			<h2>На підтримку акції «Прапор в кожну хату»</h2>
+            <h1>Купуй прапор України!</h1>
+            <h3>Повісь прапор на балкон або на вікно,<br> покажи хто тут патріот.</h3>
+			<h4><em>(та отримай 10 гривень :)</em><br><small>подробиці дивись нижче ↓</small></h4>
+        </div>
+    </div>
+    <!-- /Full Page Image Header Area -->
+
+    <!-- Intro -->
+    <div id="about" class="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <h2>Величезний прапор для справжніх патріотів! 1,5&nbsp;метри&nbsp;— завдовжки з Путіна!</h2>
+					<img src="img/150x100.png">
+                    <p class="lead">Чудовий великий прапор для&nbsp;довгого флаґштоку (наприклад,&nbsp;вудилища). Має&nbsp;клапан для&nbsp;вудки або&nbsp;древка.</p>
+                </div>
+            </div>
+			<hr>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <h2>Прапор середнього розміру для приміщень</h2>
+					<img src="img/100x70.png">
+                    <p class="lead">Ідеальний варіант для квартири, офісу або авта. Прошитий з усіх боків.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Intro -->
+
+    <!-- Services -->
+    <div id="services" class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <h2>Варто знати:</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-md-offset-2 text-center">
+                    <div class="service-item">
+                        <img src="img/ua-icon.png" alt="">
+                        <h4>Зроблено в Україні</h4>
+                        <p>Наші прапори шиються в&nbsp;Харкові патріотично налаштованими швачками. <em>Рученьки терпнуть, злипаються віченьки...</em> Зроблено з любов'ю до України.</p>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="service-item">
+                        <img src="img/ato-icon.png" alt="">
+                        <h4>Допомагаємо АТО</h4>
+                        <p>Ми не стоїм осторонь війни, що прийшла в наш дім. Ми регулярно передаємо прапори нашим мужнім воякам, які виборють мир для України. Героям слава!</p>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="service-item">
+                        <img src="img/5uah-icon.png" alt="">
+                        <h4>Повертаємо 10 грн!</h4>
+                        <p>Купуйте наш прапор та вішайте його на свій будинок або вікно. Пришліть нам фото — і ми повернем вам 10 грн на рахунок телефону, або відішлем дві СМС на 565, на ваш вибір.</p>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="service-item">
+                        <img src="img/free-icon.png" alt="">
+                        <h4>Прапор у подарунок</h4>
+                        <p>Якщо з якихось причин ви не можете заплатити за прапор, але дуже хочеться — ми його вам подаруємо, нам не шкода. Акція діє тільки в Харкові.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Services -->
+
+    <!-- Callout -->
+    <div class="callout">
+        <div class="vert-text">
+            <h1>Купуй прапор —<br>підтримай Україну!</h1>
+        </div>
+    </div>
+    <!-- /Callout -->
+
+    <!-- Portfolio -->
+<!--
+    <div id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <h2>Our Work</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-2 text-center">
+                    <div class="portfolio-item">
+                        <a href="#">
+                            <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
+                        </a>
+                        <h4>Cityscape</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="portfolio-item">
+                        <a href="#">
+                            <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
+                        </a>
+                        <h4>Is That On Fire?</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-2 text-center">
+                    <div class="portfolio-item">
+                        <a href="#">
+                            <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
+                        </a>
+                        <h4>Stop Sign</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="portfolio-item">
+                        <a href="#">
+                            <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
+                        </a>
+                        <h4>Narrow Focus</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+    <!-- /Portfolio -->
+
+    <!-- Call to Action -->
+    <div class="call-to-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <h1>Замовити прапор можна за телефоном: <strong><nobr><phone>050 987-12-34</phone></nobr></strong><br>
+                    Або надішліть листа на <strong><a class="cta-link" href=="mailto:info@praporua.com">info@praporua.com</a></strong></h1>
+                    <p>Вартість доставки Новою Поштою складає 20 грн. Укрпоштою — безкоштовно.<br>
+                    У Харкові прапор можна забрати на ст. м. Радянська</p>
+<!--
+                    <a href="#" class="btn btn-lg btn-default">Click Me!</a>
+                    <a href="#" class="btn btn-lg btn-primary">Look at Me!</a>
+-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Call to Action -->
+
+    <!-- Map -->
+    <div id="map-canvas">
+<!--        <iframe src="https://www.google.com.ua/maps/embed?pb=!1m14!1m8!1m3!1d2565.0737421861577!2d36.2328649!3d49.9912269!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a0f1b340185b%3A0x7c24d10ef8a89c4e!2z0LLRg9C7LiDQn9GD0YjQutGW0L3RgdGM0LrQsCwgMSwg0KXQsNGA0LrRltCyLCDQpdCw0YDQutGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjA!5e0!3m2!1suk!2sua!4v1409002251405" width="100%" height="100%" frameborder="0" style="border:0"></iframe>-->
+    </div>
+    <!-- /Map -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <img src="img/trident.png" alt="">
+                    <h2>Слава Україні!</h2>
+<!--
+                    <div class="top-scroll">
+                        <a href="#top">↑ на початок ↑</a>
+                    </div>
+-->
+                    <hr>
+                    <p>&copy; Громадська ініціатива «Прапор України», 2014</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript for the Side Menu and Smooth Scrolling
+    <script>
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    </script>
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    </script> -->
+    <script>
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+	$(window).scroll(function(e) {
+	    var s = $(window).scrollTop(),
+	        opacityVal = (s / 200.0);
+
+	    $('.bg-blur').css('opacity', opacityVal);
+	});
+    </script>
+
+</body>
+
+</html>
