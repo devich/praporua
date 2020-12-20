@@ -1,5 +1,9 @@
 /* Global Styles */
 
+.vert-text {
+  text-shadow: 2px 2px 4px black;
+}
+
 html,
 body {
   height: 100%;
@@ -277,6 +281,14 @@ i.scroll:hover {
 
   .flag-img {
     width: 100%;
+  }
+
+  .vert-text h1 {
+    font-size: 3em;
+  }
+
+  .vert-text {
+    padding: 10px;
   }
 
 }
